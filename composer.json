@@ -1,0 +1,14 @@
+{
+  "name": "drupal/embed_image",
+  "type": "drupal-module",
+  "description": "Embed images based on target_id in Twig templates",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.tamtam.nl",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "php@tamtam.nl",
+    "source": "https://bitbucket.org/tamtam-nl/embed_image"
+  },
+  "require": { }
+}

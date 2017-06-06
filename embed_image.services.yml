@@ -1,0 +1,5 @@
+services:
+  embed_image.twig.twig.embed_image_extension:
+    class: Drupal\embed_image\Twig\EmbedImageExtension
+    tags:
+      - { name: twig.extension }

@@ -1,0 +1,16 @@
+# PHP Storm
+.idea
+.DS_Store
+
+# Vim
+.*.sw[a-z]
+*.un~
+Session.vim
+tags
+
+# Vagrant
+.vagrant
+
+# Sublime
+*.sublime-project
+*.sublime-workspace
