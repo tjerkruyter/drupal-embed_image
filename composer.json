@@ -7,7 +7,7 @@
   "homepage": "https://www.tamtam.nl",
   "minimum-stability": "dev",
   "support": {
-    "issues": "php@tamtam.nl",
+    "issues": "tjerk@tamtam.nl",
     "source": "https://bitbucket.org/tamtam-nl/embed_image"
   },
   "require": { }
