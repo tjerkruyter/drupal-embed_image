@@ -9,6 +9,7 @@
 namespace Drupal\embed_image\Twig;
 
 use Drupal\file\Entity\File;
+use Drupal\image\Entity\ImageStyle;
 
 
 /**
@@ -49,6 +50,9 @@ class EmbedImageExtension extends \Twig_Extension {
       new \Twig_SimpleFunction('embed_image', [$this, 'embedImage'], [
         'is_safe' => ['html'],
       ]),
+        new \Twig_SimpleFunction('img_style_url', [$this, 'img_style_url'], [
+            'is_safe' => ['html'],
+        ]),
     ];
   }
 
@@ -133,4 +137,21 @@ class EmbedImageExtension extends \Twig_Extension {
 
     return [];
   }
+
+    /**
+     * @param $target_id
+     * @param string $image_style
+     * @return array
+     */
+    public function getImageStyleUrl($imageUri, $image_style = 'thumbnail') {
+        $url = null;
+
+        if( empty($imageUri) === false ) {
+            $url = ImageStyle::load($image_style)->buildUrl($imageUri);
+
+            return $url;
+        }
+
+        return $url;
+    }
 }
