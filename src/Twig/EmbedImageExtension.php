@@ -54,7 +54,7 @@ class EmbedImageExtension extends \Twig_Extension
             new \Twig_SimpleFunction('embed_image', [$this, 'embedImage'], [
                 'is_safe' => ['html'],
             ]),
-            new \Twig_SimpleFunction('img_style_url', [$this, 'img_style_url'], [
+            new \Twig_SimpleFunction('img_style_url', [$this, 'getImageStyleUrl'], [
                 'is_safe' => ['html'],
             ]),
         ];
@@ -153,8 +153,6 @@ class EmbedImageExtension extends \Twig_Extension
 
         if (empty($imageUri) === false) {
             $url = ImageStyle::load($image_style)->buildUrl($imageUri);
-
-            return $url;
         }
 
         return $url;
